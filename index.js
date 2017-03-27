@@ -91,6 +91,7 @@ function jsonp(url, opts, fn){
   // create script
   script = document.createElement('script');
   script.src = url;
+  if( opts.charset!==undefined ) script.charset = opts.charset;
   target.parentNode.insertBefore(script, target);
 
   return cancel;
